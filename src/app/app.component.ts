@@ -3,12 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
-import { AccordionComponent } from "./accordion/accordion.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ReactiveFormsModule, CommonModule, NgbAccordionModule, AccordionComponent, FormsModule],
+  imports: [RouterOutlet, ReactiveFormsModule, CommonModule, NgbAccordionModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -33,7 +32,7 @@ constructor(private fb:FormBuilder){
     receivedemail:['', Validators.required],
     postartdate:['', Validators.required],
     poenddate:['', Validators.required],
-    budget:['', Validators.required, Validators.maxLength(5)],
+    budget:['', Validators.required],
     currency:['', Validators.required],
   })
 }

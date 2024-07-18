@@ -149,9 +149,6 @@
                 <div *ngIf="f['budget'].errors['required']">
                   <span>Mandatory field</span>
                 </div>
-                <div *ngIf="f['budget'].errors['maxLength']">
-                  <span>Enter the number less then 5 digit</span>
-                </div>
               </div>
             </div>
           </div>
@@ -219,7 +216,7 @@
                          </div>
                         </div>
                       </div>
-                      <form >
+                      <form [formGroup]="PurchaseOrderForm">
                         <div class="row">
                           <div class="col-lg-3">
                          <div class="form-group">
@@ -414,14 +411,13 @@
     </ng-container>
   </div>
 
-
   <div class="form-button">
     <button class="btn" (click)="onreset()">Reset</button>
     <button class="btn save" [disabled]="isDisabled" (click)="onSave()">
       Save
     </button>
   </div>
-
+  
 </div>
 
 
