@@ -1,0 +1,42 @@
+.container-fluid{
+    padding: 2%;
+}
+.btn{
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+.talentDetail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.form-button{
+    margin-top: 30px;
+}
+
+.save{
+    margin-left: 10px;
+}
+
+.accordion-form-head{ 
+    width: 800px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.chebox-name{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+

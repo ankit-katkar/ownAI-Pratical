@@ -1,0 +1,274 @@
+<div>
+  <div ngbAccordion>
+      <div ngbAccordionItem>
+          <div ngbAccordionHeader>
+              <button ngbAccordionButton>
+                  <div class="row accordion-form-head">
+                      <div class="col-6">
+                          <label for="" class="form-label">Job Title/REQ Name</label>
+                          <select class="form-control" [(ngModel)]="selectedFramework">
+                            <option selected>Choose...</option>
+                              <option value="angular">Angular</option>
+                              <option value="ionic">Ionic</option>
+                            </select>
+                      </div>
+
+                      <div class="col-6">
+                          <label for="" class="form-label">Job ID/REQ ID</label>
+                          <input class="form-control" type="number" placeholder="Job ID/REQ ID">
+                      </div>
+                  </div>
+              </button>
+          </div>
+          <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ng-template>
+                  <div *ngIf="selectedFramework === 'angular'">
+                    <div class="row">
+                      <div class="col-lg-12">
+                       <div class="form-group">
+                        <input type="checkbox" class="form-Control" [(ngModel)]="formEnabled"> 
+                        <span>Angular</span>
+                       </div>
+                      </div>
+                    </div>
+                    <form >
+                      <div class="row">
+                        <div class="col-lg-3">
+                       <div class="form-group">
+                        <label for="" class="form-label">Contract Duration</label>
+                        <input class="form-control" type="number" placeholder="Contract Duration" [disabled]="!formEnabled">
+                       </div>
+                        </div>
+                    
+                        <div class="col-lg-9">
+                          <div class="row">
+                            <div class="col-lg-2">
+                           <div class="form-group">
+                            <label for="" class="form-label">Bill Rate</label>
+                            <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+                           </div>
+                            </div>
+                    
+                            <div class="col-lg-2">
+                              <div class="form-group">
+                                <label for="" class="form-label">Currency</label>
+                                <select class="form-control" [disabled]="!formEnabled">
+                                    <option selected>Choose...</option>
+                                    <option>INR</option>
+                                    <option>USD</option>
+                                  </select>
+                              </div>
+                            </div>
+                    
+                            <div class="col-lg-2">
+                              <div class="form-group">
+                               <label for="" class="form-label">Standard Time BR</label>
+                               <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+                              </div>
+                               </div>
+                    
+                               <div class="col-lg-2">
+                                 <div class="form-group">
+                                   <label for="" class="form-label">Currency</label>
+                                   <select class="form-control" [disabled]="!formEnabled">
+                                       <option selected>Choose...</option>
+                                       <option>INR</option>
+                                       <option>USD</option>
+                                     </select>
+                                 </div>
+                               </div>
+                    
+                               <div class="col-lg-2">
+                                <div class="form-group">
+                                 <label for="" class="form-label">Over Time BR</label>
+                                 <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+                                </div>
+                                 </div>
+                    
+                                 <div class="col-lg-2">
+                                   <div class="form-group">
+                                     <label for="" class="form-label">Currency</label>
+                                     <select class="form-control" [disabled]="!formEnabled">
+                                         <option selected>Choose...</option>
+                                         <option>INR</option>
+                                         <option>USD</option>
+                                       </select>
+                                   </div>
+                                 </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            
+                
+                  <div *ngIf="selectedFramework === 'ionic'">
+                    <div class="row">
+                      <div class="col-lg-12">
+                       <div class="form-group">
+                        <input type="checkbox" class="form-Control" [(ngModel)]="formEnabled"> 
+                        <span>Ionic</span>
+                       </div>
+                      </div>
+                    </div>
+                    <form >
+                      <div class="row">
+                        <div class="col-lg-3">
+                       <div class="form-group">
+                        <label for="" class="form-label">Contract Duration</label>
+                        <input class="form-control" type="number" placeholder="Contract Duration" [disabled]="!formEnabled">
+                       </div>
+                        </div>
+                    
+                        <div class="col-lg-9">
+                          <div class="row">
+                            <div class="col-lg-2">
+                           <div class="form-group">
+                            <label for="" class="form-label">Bill Rate</label>
+                            <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+                           </div>
+                            </div>
+                    
+                            <div class="col-lg-2">
+                              <div class="form-group">
+                                <label for="" class="form-label">Currency</label>
+                                <select class="form-control" [disabled]="!formEnabled">
+                                    <option selected>Choose...</option>
+                                    <option>INR</option>
+                                    <option>USD</option>
+                                  </select>
+                              </div>
+                            </div>
+                    
+                            <div class="col-lg-2">
+                              <div class="form-group">
+                               <label for="" class="form-label">Standard Time BR</label>
+                               <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+                              </div>
+                               </div>
+                    
+                               <div class="col-lg-2">
+                                 <div class="form-group">
+                                   <label for="" class="form-label">Currency</label>
+                                   <select class="form-control" [disabled]="!formEnabled">
+                                       <option selected>Choose...</option>
+                                       <option>INR</option>
+                                       <option>USD</option>
+                                     </select>
+                                 </div>
+                               </div>
+                    
+                               <div class="col-lg-2">
+                                <div class="form-group">
+                                 <label for="" class="form-label">Over Time BR</label>
+                                 <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+                                </div>
+                                 </div>
+                    
+                                 <div class="col-lg-2">
+                                   <div class="form-group">
+                                     <label for="" class="form-label">Currency</label>
+                                     <select class="form-control" [disabled]="!formEnabled">
+                                         <option selected>Choose...</option>
+                                         <option>INR</option>
+                                         <option>USD</option>
+                                       </select>
+                                   </div>
+                                 </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </ng-template>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+  <div class="col-lg-12">
+   <div class="form-group">
+    <input type="checkbox" class="form-Control" [(ngModel)]="formEnabled"> 
+    <span>Angular</span>
+   </div>
+  </div>
+</div>
+<form >
+  <div class="row">
+    <div class="col-lg-3">
+   <div class="form-group">
+    <label for="" class="form-label">Contract Duration</label>
+    <input class="form-control" type="number" placeholder="Contract Duration" [disabled]="!formEnabled">
+   </div>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-lg-2">
+       <div class="form-group">
+        <label for="" class="form-label">Bill Rate</label>
+        <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+       </div>
+        </div>
+
+        <div class="col-lg-2">
+          <div class="form-group">
+            <label for="" class="form-label">Currency</label>
+            <select class="form-control" [disabled]="!formEnabled">
+                <option selected>Choose...</option>
+                <option>INR</option>
+                <option>USD</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="col-lg-2">
+          <div class="form-group">
+           <label for="" class="form-label">Standard Time BR</label>
+           <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+          </div>
+           </div>
+
+           <div class="col-lg-2">
+             <div class="form-group">
+               <label for="" class="form-label">Currency</label>
+               <select class="form-control" [disabled]="!formEnabled">
+                   <option selected>Choose...</option>
+                   <option>INR</option>
+                   <option>USD</option>
+                 </select>
+             </div>
+           </div>
+
+           <div class="col-lg-2">
+            <div class="form-group">
+             <label for="" class="form-label">Over Time BR</label>
+             <input class="form-control" type="number" placeholder="Bill Rate" [disabled]="!formEnabled">
+            </div>
+             </div>
+
+             <div class="col-lg-2">
+               <div class="form-group">
+                 <label for="" class="form-label">Currency</label>
+                 <select class="form-control" [disabled]="!formEnabled">
+                     <option selected>Choose...</option>
+                     <option>INR</option>
+                     <option>USD</option>
+                   </select>
+               </div>
+             </div>
+      </div>
+    </div>
+  </div>
+</form> -->
+
